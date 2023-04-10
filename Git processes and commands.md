@@ -148,8 +148,25 @@ git update-index --no-assume-unchanged gen.bat
 # 查看当前被忽略的文件
 git ls-files -v | grep -e "^[hsmrck]"
 ```
-
-
-
-
+### 5.3 git commit 格式建议
+[参看资料1](https://zhuanlan.zhihu.com/p/400870942)
+- commit message格式
+```text
+<commit类型>(影响范围): 具体描述
+<type>(<scope>): <subject>
+举例 fix(DAO): fixed invalid user table indexes.
+```
+- type
+```text
+feat    : 新增功能
+fix     : 修复bug
+docs    : 仅仅修改了文档，比如 README, CHANGELOG等等
+test    : 增加/修改测试用例，包括单元测试、集成测试等
+style   : 修改了空行、缩进格式、引用包排序等等（不改变代码逻辑）
+perf    : 优化相关内容，比如提升性能、体验、算法等
+refactor: 代码重构，「没有新功能或者bug修复」
+chore   : 改变构建流程、或者增加依赖库、工具等
+revert  : 回滚到上一个版本
+merge   : 代码合并
+```
 
