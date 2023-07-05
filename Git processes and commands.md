@@ -93,7 +93,7 @@ git push origin develop
 # commit 并使用上次commit Msg
 git commit --amend --no-edit
 # 修改当前commit Msg
-git commit --ament -m "commit msg"
+git commit --amend -m "commit msg"
 ```
 
 ### 3.3 回滚远程分支
@@ -121,6 +121,14 @@ git merge origin/remoteTag localTag
 git commit -m "commit msg"
 # 提交到远程
 git push origin localTag:remoteTag
+```
+
+### 3.6 更新远程仓库地址
+```bash
+# 设置远程url地址
+git remote set-url origin <url>
+# 查看远程信息
+git remote -v
 ```
 
 ## 4 查看
