@@ -1,4 +1,4 @@
-# Shell 常用指令
+args# Shell 常用指令
 
 ## 1. 匹配文件内容
 ```bash
@@ -32,4 +32,9 @@ mysql -u root -p
 ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 # 导入数据库
 mysql -uroot -p < /home/databases.sql
+```
+
+```
+cat 2023-08-0*/zlog.* | grep "proto type=" | awk -F "|=" '{for(i=1;i<=NF;i++){if($i~"proto type"){print $(i+1)}}}' > test.log
+sort test.log | uniq -c > protonum.txt
 ```

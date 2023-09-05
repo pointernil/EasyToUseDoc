@@ -178,3 +178,13 @@ revert  : 回滚到上一个版本
 merge   : 代码合并
 ```
 
+## 6 暂存
+```bash
+git stash
+git stash save "<msg>"
+git stash list
+git stash show <stashTag>
+git stash pop
+git stash apply
+git stash clear
+```
